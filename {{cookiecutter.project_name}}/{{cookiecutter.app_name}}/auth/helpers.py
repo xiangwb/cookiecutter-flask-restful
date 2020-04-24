@@ -8,10 +8,7 @@ from datetime import datetime
 from flask_jwt_extended import decode_token
 import mongoengine as mg
 
-from
-
-{{cookiecutter.app_name}}.models
-import TokenBlacklist
+from {{cookiecutter.app_name}}.models import TokenBlacklist
 
 
 def add_token_to_database(encoded_token, identity_claim):

@@ -4,7 +4,7 @@ Cookiecutter template for flask restful, including blueprints, application facto
 
 ## Introduction
 
-This cookie cutter is a very simple boilerplate for starting a REST api using Flask, flask-restful, marshmallow, SQLAlchemy and jwt.
+This cookie cutter is a very simple boilerplate for starting a REST api using Flask, flask-restful, marshmallow, pymongo, mongoengine and jwt.
 It comes with basic project structure and configuration, including blueprints, application factory and basics unit tests.
 
 Features
@@ -12,7 +12,7 @@ Features
 * Simple flask application using application factory, blueprints
 * [Flask command line interface](http://flask.pocoo.org/docs/1.0/cli/) integration
 * Simple cli implementation with basics commands (init, run, etc.)
-* [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/) included in entry point
+ point
 * Authentication using [Flask-JWT-Extended](http://flask-jwt-extended.readthedocs.io/en/latest/) including access token and refresh token management
 * Simple pagination utils
 * Unit tests using pytest and factoryboy
@@ -23,11 +23,10 @@ Used packages :
 
 * [Flask](http://flask.pocoo.org/)
 * [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/)
-* [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/)
-* [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/2.3/)
+* [pymongo](https://api.mongodb.com/python/3.9.0/)
+* [mongoengine](http://docs.mongoengine.org/)
 * [Flask-Marshmallow](https://flask-marshmallow.readthedocs.io/en/latest/)
 * [Flask-JWT-Extended](http://flask-jwt-extended.readthedocs.io/en/latest/)
-* [marshmallow-sqlalchemy](https://marshmallow-sqlalchemy.readthedocs.io/en/latest/)
 * [passlib](https://passlib.readthedocs.io/en/stable/)
 * [tox](https://tox.readthedocs.io/en/latest/)
 * [pytest](https://docs.pytest.org/en/latest/)
@@ -65,7 +64,7 @@ Starting a new project is as easy as running this command at the command line. N
 
 To create a project run the following command and follow the prompt
 
-`cookiecutter https://github.com/karec/cookiecutter-flask-restful`
+`cookiecutter https://github.com/leotang1218/cookiecutter-flask-restful.git`
 
 #### Install project requirements
 
@@ -76,14 +75,14 @@ You can install it using pip :
 ```
 cd myproject
 pip install -r requirements.txt
+# 下面的命令把当前的代码打成
 pip install -e .
 ```
 
 You have now access to cli commands and you can init your project
 
 ```
-myapi db upgrade
-myapi init
+mongo不需要初始数据库
 ```
 
 To list all commands
@@ -101,18 +100,18 @@ It's filled by default with following content:
 
 ```
 FLASK_ENV=development
-FLASK_APP="myapp.app:create_app"
+FLASK_APP={{cookiecutter.app_name}}.app:create_app
 SECRET_KEY=changeme
-DATABASE_URI="sqlite:////tmp/myapp.db"
-CELERY_BROKER_URL=amqp://guest:guest@localhost/  # only present when celery is enabled
-CELERY_RESULT_BACKEND_URL=amqp://guest:guest@localhost/  # only present when celery is enabled
+DATABASE_URI=mongodb://localhost:27017/{{cookiecutter.app_name}}
+CELERY_BROKER_URL=redis://localhost:6379/1  # celery启用时有效
+CELERY_RESULT_BACKEND_URL=redis://localhost:6379/2  # celery启用时有效
 ```
 
 Avaible configuration keys:
 
 * `FLASK_ENV`: flask configuration key, enables `DEBUG` if set to `development`
 * `SECREY_KEY`: your application secret key
-* `DATABASE_URI`: SQLAlchemy connection string
+* `DATABASE_URI`: pymongo connection string
 * `CELERY_BROKER_URL`: URL to use for celery broker, only when you enabled celery
 * `CELERY_RESULT_BACKEND_URL`: URL to use for celery result backend (e.g: `redis://localhost`)
 
