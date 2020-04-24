@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23a83b6e-ce89-446a-a84c-e1d248efd5d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +26,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="408">
+              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_celery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="25" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,7 +104,6 @@
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/auth/views.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/commons/pagination.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/views.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/conftest.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/auth/helpers.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/config.py" />
@@ -79,6 +112,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/setup.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_celery.py" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_user.py" />
       </list>
     </option>
   </component>
@@ -107,6 +143,12 @@
               <item name="cookiecutter-flask-restful" type="b2602c69:ProjectViewProjectNode" />
               <item name="cookiecutter-flask-restful" type="462c0819:PsiDirectoryNode" />
               <item name="{{cookiecutter.project_name}}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-flask-restful" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-flask-restful" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.project_name}}" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -150,12 +192,12 @@
       <updated>1587692885789</updated>
       <workItem from="1587692887164" duration="14878000" />
       <workItem from="1587717799723" duration="1234000" />
-      <workItem from="1587719378731" duration="330000" />
+      <workItem from="1587719378731" duration="1226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16442000" />
+    <option name="totallyTimeSpent" value="17338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="944" extended-state="0" />
@@ -387,31 +429,6 @@
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_auth.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_celery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/auth/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -475,8 +492,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="408">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_celery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
