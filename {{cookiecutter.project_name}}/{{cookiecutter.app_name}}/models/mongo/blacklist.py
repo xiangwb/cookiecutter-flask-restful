@@ -14,28 +14,26 @@ like a redis or a memcached server.
 This example is heavily inspired by
 https://github.com/vimalloc/flask-jwt-extended/blob/master/examples/database_blacklist/
 """
-from {{cookiecutter.app_name}}.extensions import db
+from {{cookiecutter.app_name}}.models.mongo import CommonDocument
+import mongoengine as mg
 
 
-class TokenBlacklist(db.Model):
+class TokenBlacklist(CommonDocument):
     """Blacklist representation
     """
 
-    id = db.Column(db.Integer, primary_key=True)
-    jti = db.Column(db.String(36), nullable=False, unique=True)
-    token_type = db.Column(db.String(10), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    revoked = db.Column(db.Boolean, nullable=False)
-    expires = db.Column(db.DateTime, nullable=False)
-
-    user = db.relationship("User", lazy="joined")
+    jti = mg.StringField(required=True, max_length=36, unique=True)
+    token_type = mg.StringField(required=True, max_length=10)
+    user_id = mg.StringField(required=True, max_length=36)  # 相当于用户的外键
+    revoked = mg.BooleanField(required=True)
+    expires = mg.DateTimeField(required=True)
 
     def to_dict(self):
         return {
             "token_id": self.id,
             "jti": self.jti,
             "token_type": self.token_type,
-            "user_identity": self.user_identity,
             "revoked": self.revoked,
             "expires": self.expires,
+            "user_id": self.user_id,
         }

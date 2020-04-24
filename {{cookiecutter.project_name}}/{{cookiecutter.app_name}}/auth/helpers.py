@@ -6,10 +6,12 @@ https://github.com/vimalloc/flask-jwt-extended/blob/master/examples/database_bla
 from datetime import datetime
 
 from flask_jwt_extended import decode_token
-from sqlalchemy.orm.exc import NoResultFound
+import mongoengine as mg
 
-from {{cookiecutter.app_name}}.extensions import db
-from {{cookiecutter.app_name}}.models import TokenBlacklist
+from
+
+{{cookiecutter.app_name}}.models
+import TokenBlacklist
 
 
 def add_token_to_database(encoded_token, identity_claim):
@@ -32,8 +34,7 @@ def add_token_to_database(encoded_token, identity_claim):
         expires=expires,
         revoked=revoked,
     )
-    db.session.add(db_token)
-    db.session.commit()
+    db_token.save()
 
 
 def is_token_revoked(decoded_token):
@@ -45,9 +46,9 @@ def is_token_revoked(decoded_token):
     """
     jti = decoded_token["jti"]
     try:
-        token = TokenBlacklist.query.filter_by(jti=jti).one()
+        token = TokenBlacklist.objects.get(jti=jti)
         return token.revoked
-    except NoResultFound:
+    except (mg.DoesNotExist, mg.MultipleObjectsReturned):
         return True
 
 
@@ -58,8 +59,8 @@ def revoke_token(token_jti, user):
     if token is not found we raise an exception
     """
     try:
-        token = TokenBlacklist.query.filter_by(jti=token_jti, user_id=user).one()
+        token = TokenBlacklist.objects.get(jti=token_jti, user_id=user)
         token.revoked = True
-        db.session.commit()
-    except NoResultFound:
+        token.save()
+    except (mg.DoesNotExist, mg.MultipleObjectsReturned):
         raise Exception("Could not find the token {}".format(token_jti))

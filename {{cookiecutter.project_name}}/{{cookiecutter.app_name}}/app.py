@@ -1,7 +1,8 @@
 from flask import Flask
+from mongoengine import connect
 
 from {{cookiecutter.app_name}} import auth, api
-from {{cookiecutter.app_name}}.extensions import db, jwt, migrate, apispec
+from {{cookiecutter.app_name}}.extensions import jwt, apispec
 {%- if cookiecutter.use_celery == "yes"%}, celery{% endif%}
 
 
@@ -27,11 +28,14 @@ def create_app(testing=False, cli=False):
 def configure_extensions(app, cli):
     """configure flask extensions
     """
-    db.init_app(app)
+    if cli is True:
+        connect(host='mongodb://localhost:27017/{{cookiecutter.app_name}}_tmp')
+    else:
+        # 建立mongo的数据库连接，mongo的连接只需要connect就行
+        connect(host=app.config['DATABASE_URI'])
+
     jwt.init_app(app)
 
-    if cli is True:
-        migrate.init_app(app, db)
 
 
 def configure_apispec(app):
@@ -65,7 +69,7 @@ def register_blueprints(app):
 def init_celery(app=None):
     app = app or create_app()
     celery.conf.broker_url = app.config["CELERY_BROKER_URL"]
-    celery.conf.result_backend = app.config["CELERY_RESULT_BACKEND"]
+    celery.conf.result_backend = app.config["CELERY_RESULT_BACKEND_URL"]
     celery.conf.update(app.config)
 
     class ContextTask(celery.Task):

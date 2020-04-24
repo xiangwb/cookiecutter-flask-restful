@@ -174,7 +174,7 @@ def revoke_refresh_token():
 
 @jwt.user_loader_callback_loader
 def user_loader_callback(identity):
-    return User.query.get(identity)
+    return User.objects.get(id=identity)
 
 
 @jwt.token_in_blacklist_loader

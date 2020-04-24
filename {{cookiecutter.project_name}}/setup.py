@@ -8,12 +8,9 @@ setup(
     packages=find_packages(exclude=["tests"]),
     install_requires=[
         "flask",
-        "flask-sqlalchemy",
         "flask-restful",
-        "flask-migrate",
         "flask-jwt-extended",
         "flask-marshmallow",
-        "marshmallow-sqlalchemy",
         "python-dotenv",
         "passlib",
         "apispec[yaml]",

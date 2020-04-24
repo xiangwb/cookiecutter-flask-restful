@@ -17,14 +17,11 @@ def cli():
 def init():
     """Create a new admin user
     """
-    from {{cookiecutter.app_name}}.extensions import db
     from {{cookiecutter.app_name}}.models import User
 
     click.echo("create user")
-    user = User(username="{{cookiecutter.admin_user_username}}", email="{{cookiecutter.admin_user_email}}", password="{{cookiecutter.admin_user_password}}", active=True)
-    db.session.add(user)
-    db.session.commit()
-    click.echo("created user admin")
+    user = User(username="{{cookiecutter.admin_user_username}}", email="{{cookiecutter.admin_user_email}}", password="{{cookiecutter.admin_user_password}}", active=True).save()
+    click.echo("created user admin: {id}".format(id=user.id))
 
 
 if __name__ == "__main__":

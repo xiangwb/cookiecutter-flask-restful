@@ -16,6 +16,5 @@ RUN pip install -r requirements.txt
 RUN pip install -e .
 
 COPY {{ cookiecutter.app_name }} {{ cookiecutter.app_name }}/
-COPY migrations migrations/
 
 EXPOSE 5000

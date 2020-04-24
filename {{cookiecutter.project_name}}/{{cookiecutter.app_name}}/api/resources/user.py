@@ -1,20 +1,17 @@
-from flask import request
+from flask import request, abort
 from flask_restful import Resource
 from flask_jwt_extended import jwt_required
 
+import mongoengine as mg
 from {{cookiecutter.app_name}}.models import User
-from {{cookiecutter.app_name}}.extensions import ma, db
-from {{cookiecutter.app_name}}.commons.pagination import paginate
+from {{cookiecutter.app_name}}.extensions import ma
+from {{cookiecutter.app_name}}.commons.pagination import Pagination
 
 
-class UserSchema(ma.ModelSchema):
-
-    id = ma.Int(dump_only=True)
+class UserSchema(ma.Schema):
+    id = ma.String(dump_only=True)
     password = ma.String(load_only=True, required=True)
-
-    class Meta:
-        model = User
-        sqla_session = db.session
+    username = ma.String(required=True)
 
 
 class UserResource(Resource):
@@ -91,24 +88,28 @@ class UserResource(Resource):
 
     def get(self, user_id):
         schema = UserSchema()
-        user = User.query.get_or_404(user_id)
-        return {"user": schema.dump(user)}
+        try:
+            user = User.objects.get(user_id)
+            return {"user": schema.dump(user)}
+        except (mg.DoesNotExist, mg.MultipleObjectsReturned):
+            abort(401, {'msg': '用户不存在'})
 
     def put(self, user_id):
         schema = UserSchema(partial=True)
-        user = User.query.get_or_404(user_id)
-        user = schema.load(request.json, instance=user)
-
-        db.session.commit()
-
-        return {"msg": "user updated", "user": schema.dump(user)}
+        try:
+            user = User.objects.get(user_id)
+            user = schema.load(request.json, instance=user)
+            user.update(**user)
+            return {"msg": "user updated", "user": schema.dump(user)}
+        except (mg.DoesNotExist, mg.MultipleObjectsReturned):
+            abort(401, {'msg': '用户不存在'})
 
     def delete(self, user_id):
-        user = User.query.get_or_404(user_id)
-        db.session.delete(user)
-        db.session.commit()
-
-        return {"msg": "user deleted"}
+        try:
+            User.objects.get(user_id).delete()
+            return {"msg": "user deleted"}
+        except (mg.DoesNotExist, mg.MultipleObjectsReturned):
+            abort(401, {'msg': '用户不存在'})
 
 
 class UserList(Resource):
@@ -156,14 +157,12 @@ class UserList(Resource):
 
     def get(self):
         schema = UserSchema(many=True)
-        query = User.query
-        return paginate(query, schema)
+        query = User.objects.all()
+        objs, page = Pagination(query).paginate(schema)
+        return {'response': objs, 'page': page}
 
     def post(self):
         schema = UserSchema()
-        user = schema.load(request.json)
-
-        db.session.add(user)
-        db.session.commit()
-
+        data = schema.load(request.json)
+        user = User.objects.create(**data)
         return {"msg": "user created", "user": schema.dump(user)}, 201

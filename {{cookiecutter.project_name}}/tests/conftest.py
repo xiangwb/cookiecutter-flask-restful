@@ -3,39 +3,27 @@ import pytest
 
 from {{cookiecutter.app_name}}.models import User
 from {{cookiecutter.app_name}}.app import create_app
-from {{cookiecutter.app_name}}.extensions import db as _db
 
 
-@pytest.fixture
+@pytest.fixture(scope='module')
 def app():
-    app = create_app(testing=True)
-    return app
-
-
-@pytest.fixture
-def db(app):
-    _db.app = app
-
+    app = create_app(testing=True, cli=True)
     with app.app_context():
-        _db.create_all()
+        pass
+    yield app
 
-    yield _db
-
-    _db.session.close()
-    _db.drop_all()
+    # 删除建的临时库
+    from pymongo import MongoClient
+    client = MongoClient('localhost', 27017)
+    client.drop_database('{{cookiecutter.app_name}}_tmp')
 
 
 @pytest.fixture
-def admin_user(db):
-    user = User(
-        username='admin',
-        email='admin@admin.com',
-        password='admin'
-    )
-
-    db.session.add(user)
-    db.session.commit()
-
+def admin_user(app):
+    _admin = {'username': 'admin', 'email': 'admin@admin.com', 'password': 'admin'}
+    user = User.objects.filter(username=_admin['username']).first()
+    if not user:
+        user = User.objects.create(**_admin)
     return user
 
 
