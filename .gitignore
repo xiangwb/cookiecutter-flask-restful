@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Add by leo
+.idea/*
+celerybeat.pid
+celerybeat-schedule
+http_runner/reports/

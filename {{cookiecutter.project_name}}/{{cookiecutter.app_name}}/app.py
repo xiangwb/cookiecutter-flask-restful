@@ -37,7 +37,6 @@ def configure_extensions(app, cli):
     jwt.init_app(app)
 
 
-
 def configure_apispec(app):
     """Configure APISpec for swagger support
     """

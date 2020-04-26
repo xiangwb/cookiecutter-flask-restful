@@ -23,7 +23,7 @@ class UserResource(Resource):
         - api
       parameters:
         - in: path
-          name: user_id
+          name: username
           schema:
             type: integer
       responses:
@@ -41,7 +41,7 @@ class UserResource(Resource):
         - api
       parameters:
         - in: path
-          name: user_id
+          name: username
           schema:
             type: integer
       requestBody:
@@ -67,7 +67,7 @@ class UserResource(Resource):
         - api
       parameters:
         - in: path
-          name: user_id
+          name: username
           schema:
             type: integer
       responses:
@@ -92,7 +92,7 @@ class UserResource(Resource):
             user = User.objects.get(username=username)
             return {"user": schema.dump(user)}
         except (mg.DoesNotExist, mg.MultipleObjectsReturned):
-            abort(401, {'msg': '用户不存在'})
+            abort(404, {'msg': '用户不存在'})
 
     def put(self, username):
         schema = UserSchema(partial=True)
@@ -102,14 +102,14 @@ class UserResource(Resource):
             user.update(**user)
             return {"msg": "user updated", "user": schema.dump(user)}
         except (mg.DoesNotExist, mg.MultipleObjectsReturned):
-            abort(401, {'msg': '用户不存在'})
+            abort(404, {'msg': '用户不存在'})
 
     def delete(self, username):
         try:
             User.objects.get(username=username).delete()
             return {"msg": "user deleted"}
         except (mg.DoesNotExist, mg.MultipleObjectsReturned):
-            abort(401, {'msg': '用户不存在'})
+            abort(404, {'msg': '用户不存在'})
 
 
 class UserList(Resource):
