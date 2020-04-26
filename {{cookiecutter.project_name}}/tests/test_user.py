@@ -6,35 +6,29 @@ from {{cookiecutter.app_name}}.models import User
 
 @register
 class UserFactory(factory.Factory):
-
-    username = factory.Sequence(lambda n: "user%d" % n)
-    email = factory.Sequence(lambda n: "user%d@mail.com" % n)
+    username = factory.Sequence(lambda n: "user{}".format(n))
+    email = factory.Sequence(lambda n: "user{}@mail.com".format(n))
     password = "mypwd"
 
     class Meta:
         model = User
 
 
-def test_get_user(client, user, admin_headers):
-    # test 404
-    rep = client.get("/api/v1/users/100000", headers=admin_headers)
+def test_get_one(client, admin_headers):
+    _tmp = {'username': 'just_do_it', 'password': 'mypwd', 'active': True}
+    rep = client.get("/api/v1/users/{}".format(_tmp['username']), headers=admin_headers)
     assert rep.status_code == 404
-
-    user.save()
-
-    # test get_user
-    rep = client.get("/api/v1/users/%d" % user.username, headers=admin_headers)
+    User.objects.create(**_tmp)
+    rep = client.get("/api/v1/users/{}".format(_tmp['username']), headers=admin_headers)
     assert rep.status_code == 200
-
-    data = rep.get_json()["user"]
-    assert data["username"] == user.username
-    assert data["email"] == user.email
-    assert data["active"] == user.active
+    data = rep.json["user"]
+    assert data["username"] == _tmp['username']
 
 
-def test_put_user(client, user, admin_headers):
+def test_put_user(client, user_factory, admin_headers):
     # test 404
-    rep = client.put("/api/v1/users/100000", headers=admin_headers)
+    user = user_factory(username="998", password='mypwd', email='user998@mail.com')
+    rep = client.put("/api/v1/users/{}".format(user.username), headers=admin_headers)
     assert rep.status_code == 404
 
     user.save()
@@ -42,25 +36,24 @@ def test_put_user(client, user, admin_headers):
     data = {"username": "updated"}
 
     # test update user
-    rep = client.put("/api/v1/users/%d" % user.username, json=data, headers=admin_headers)
+    rep = client.put("/api/v1/users/{}".format(user.username), json=data, headers=admin_headers)
     assert rep.status_code == 200
 
     data = rep.get_json()["user"]
     assert data["username"] == "updated"
-    assert data["email"] == user.email
-    assert data["active"] == user.active
 
 
-def test_delete_user(client, user, admin_headers):
+def test_delete_user(client, user_factory, admin_headers):
     # test 404
-    rep = client.delete("/api/v1/users/100000", headers=admin_headers)
+    user = user_factory(username="999", password='mypwd', email='user998@mail.com')
+    rep = client.delete("/api/v1/users/{}".format(user.username), headers=admin_headers)
     assert rep.status_code == 404
 
     user.save()
 
     # test get_user
     user_id = user.id
-    rep = client.delete("/api/v1/users/%d" % user.username, headers=admin_headers)
+    rep = client.delete("/api/v1/users/{}".format(user.username), headers=admin_headers)
     assert rep.status_code == 200
     assert User.objects.filter(id=user_id).first() is None
 
@@ -72,7 +65,6 @@ def test_create_user(client, admin_headers):
     assert rep.status_code == 400
 
     data["password"] = "admin"
-    data["email"] = "create@mail.com"
 
     rep = client.post("/api/v1/users", json=data, headers=admin_headers)
     assert rep.status_code == 201
@@ -81,18 +73,17 @@ def test_create_user(client, admin_headers):
     user = User.objects.filter(id=data["user"]["id"]).first()
 
     assert user.username == "created"
-    assert user.email == "create@mail.com"
 
 
 def test_get_all_user(client, user_factory, admin_headers):
-    users = user_factory.create_batch(30)
+    users = user_factory.create_batch(8)
 
-    for user_data in users:
-        User.objects.create(**user_data)
+    for user in users:
+        user.save()
 
     rep = client.get("/api/v1/users", headers=admin_headers)
     assert rep.status_code == 200
 
-    results = rep.get_json()
+    results = rep.json
     for user in users:
-        assert any(u["id"] == user.id for u in results["results"])
+        assert any(u["username"] == user.username for u in results["response"])

@@ -98,8 +98,9 @@ class UserResource(Resource):
         schema = UserSchema(partial=True)
         try:
             user = User.objects.get(username=username)
-            user = schema.load(request.json, instance=user)
-            user.update(**user)
+            user_data = schema.load(request.json)
+            user.update(**user_data)
+            user.reload()
             return {"msg": "user updated", "user": schema.dump(user)}
         except (mg.DoesNotExist, mg.MultipleObjectsReturned):
             abort(404, {'msg': '用户不存在'})
