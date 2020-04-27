@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23a83b6e-ce89-446a-a84c-e1d248efd5d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_deploy_pyc.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_deploy_pyc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +36,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_deploy_pyc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+            <state relative-caret-position="495">
+              <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
               <folding>
                 <element signature="e#235#244#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -100,9 +109,9 @@
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_user.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_celery.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_deploy_pyc.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/Makefile" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_deploy_pyc.py" />
       </list>
     </option>
   </component>
@@ -177,12 +186,12 @@
       <updated>1587692885789</updated>
       <workItem from="1587692887164" duration="14878000" />
       <workItem from="1587717799723" duration="1234000" />
-      <workItem from="1587719378731" duration="11860000" />
+      <workItem from="1587719378731" duration="12455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27972000" />
+    <option name="totallyTimeSpent" value="28567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="944" extended-state="0" />
@@ -522,14 +531,14 @@
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="44" selection-start-column="44" selection-end-column="44" />
+          <caret selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_deploy_pyc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        <state relative-caret-position="495">
+          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
           <folding>
             <element signature="e#235#244#0" expanded="true" />
           </folding>

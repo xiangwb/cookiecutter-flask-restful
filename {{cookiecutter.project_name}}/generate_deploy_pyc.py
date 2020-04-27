@@ -37,14 +37,17 @@ def main(src_dir, dst_dir):
         for file_name in file_list:
             _src_file_path = os.path.join(path, file_name)
             _dst_file_path = os.path.join(path.replace(src_dir, dst_dir, 1), file_name)
-            if not file_name.endswith('.py'):
-                # 直接复制源文件
-                shutil.copy(_src_file_path, _dst_file_path)
-                print('复制文件：{}...'.format(_src_file_path))
-                continue
-            print('混淆文件：{}...'.format(_src_file_path))
-            _obfuscate_exec = 'pyminifier --obfuscate -o {dst} {src}'.format(dst=_dst_file_path, src=_src_file_path)
-            os.system(_obfuscate_exec)
+            shutil.copy(_src_file_path, _dst_file_path)
+            print('复制文件：{}...'.format(_src_file_path))
+            # TODO: 如何混淆加密整个工程
+            # if not file_name.endswith('.py'):
+            #     # 直接复制源文件
+            #     shutil.copy(_src_file_path, _dst_file_path)
+            #     print('复制文件：{}...'.format(_src_file_path))
+            #     continue
+            # print('混淆文件：{}...'.format(_src_file_path))
+            # _obfuscate_exec = 'pyminifier --obfuscate -o {dst} {src}'.format(dst=_dst_file_path, src=_src_file_path)
+            # os.system(_obfuscate_exec)
 
     # 编译成.pyc，删除原有的.py
     os.system("python3 -m compileall -f -b %s" % dst_dir)
