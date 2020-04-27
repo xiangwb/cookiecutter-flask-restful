@@ -1,4 +1,4 @@
-.PHONY: init build run test tox
+.PHONY: init build run test tox pyc
 
 init:  build run
 	docker-compose exec web {{cookiecutter.app_name}} db upgrade
@@ -34,5 +34,5 @@ tox:
 lint:
 	docker-compose run web tox -e lint
 
-generate_deploy_pyc:
+pyc:
 	python3 generate_deploy_pyc.py
