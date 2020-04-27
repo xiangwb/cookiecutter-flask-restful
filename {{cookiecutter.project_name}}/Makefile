@@ -33,3 +33,6 @@ tox:
 
 lint:
 	docker-compose run web tox -e lint
+
+generate_deploy_pyc:
+	python3 generate_deploy_pyc.py
