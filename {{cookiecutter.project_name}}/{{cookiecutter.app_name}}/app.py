@@ -37,9 +37,9 @@ def configure_extensions(app, cli):
         connect(host=app.config['DATABASE_URI'])
 
     jwt.init_app(app)
-    { % - if cookiecutter.use_limiter == "yes" %}
+{ % - if cookiecutter.use_limiter == "yes" %}
     limiter.init_app(app)
-    { % - endif %}
+{ % - endif %}
     logger.init_loggers(app)
 
 
