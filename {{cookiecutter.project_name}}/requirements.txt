@@ -24,3 +24,4 @@ uwsgi
 {%- if cookiecutter.wsgi_server == "gunicorn" %}
 gunicorn==19.9.0
 {%- endif %}
+Cython==0.29.17

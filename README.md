@@ -154,6 +154,25 @@ this will only return a new access token
 }
 ```
 
+### 打包
+
+开发者可以根据自己的需求修改generate_cython.py要编译的文件（本人试过整个工程编译，没法正常运行工程，以后有空再改）
+
+修改完generate_cython.py后，运行以下指令，(参数参看源码)：
+
+```
+
+make cython
+
+or 
+
+python generate_cython.py
+
+```
+
+编译后的deploy/{app_name}文件夹等同于原工程的{app_name}
+
+
 ### Running tests
 
 Simplest way to run tests is to use tox, it will create a virtualenv for tests, install all dependencies and run pytest
