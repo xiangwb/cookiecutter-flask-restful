@@ -83,6 +83,7 @@ You have now access to cli commands and you can init your project
 
 ```
 mongo不需要初始数据库
+export PYTHONPATH=运行的工作文件夹绝对路径:$PYTHONPATH
 ```
 
 To list all commands
