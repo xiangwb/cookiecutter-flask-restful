@@ -10,6 +10,7 @@ from flask_marshmallow import Marshmallow
 from celery import Celery
 {%- endif %}
 {%- if cookiecutter.use_limiter == "yes" %}
+from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 {%- endif %}
 

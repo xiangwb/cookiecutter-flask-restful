@@ -39,7 +39,7 @@ def configure_extensions(app, cli):
     jwt.init_app(app)
     { % - if cookiecutter.use_limiter == "yes" %}
     limiter.init_app(app)
-    { % endif %}
+    { % - endif %}
     logger.init_loggers(app)
 
 

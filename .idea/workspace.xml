@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23a83b6e-ce89-446a-a84c-e1d248efd5d8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="13" selection-end-column="12" />
+              <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="12" />
               <folding>
                 <element signature="e#110#150#0" expanded="true" />
               </folding>
@@ -77,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+            <state relative-caret-position="487">
+              <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -255,12 +257,12 @@
       <workItem from="1587692887164" duration="14878000" />
       <workItem from="1587717799723" duration="1234000" />
       <workItem from="1587719378731" duration="14764000" />
-      <workItem from="1588160548802" duration="1850000" />
+      <workItem from="1588160548802" duration="2094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32726000" />
+    <option name="totallyTimeSpent" value="32970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="944" extended-state="0" />
@@ -563,9 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/celery_app.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -614,16 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="13" selection-end-column="12" />
-          <folding>
-            <element signature="e#110#150#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -634,10 +623,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="e#110#150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/celery_app.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        <state relative-caret-position="487">
+          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
