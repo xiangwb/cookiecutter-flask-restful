@@ -3,7 +3,7 @@ from mongoengine import connect
 
 from {{cookiecutter.app_name}} import auth, api
 from {{cookiecutter.app_name}}.extensions import jwt, apispec, logger
-{%- if cookiecutter.use_celery == "yes"%}, celery{% endif%}
+{%- if cookiecutter.use_celery == "yes"%}, celery{% endif%}{%- if cookiecutter.use_limiter == "yes"%}, limiter{% endif%}
 from {{cookiecutter.app_name}}.request_handler import register_error_handler
 
 
@@ -37,6 +37,9 @@ def configure_extensions(app, cli):
         connect(host=app.config['DATABASE_URI'])
 
     jwt.init_app(app)
+    { % - if cookiecutter.use_limiter == "yes" %}
+    limiter.init_app(app)
+    { % - endif %}
     logger.init_loggers(app)
 
 

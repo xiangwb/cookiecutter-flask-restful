@@ -25,3 +25,6 @@ uwsgi
 gunicorn==19.9.0
 {%- endif %}
 Cython==0.29.17
+{%- if cookiecutter.use_limiter == "yes" %}
+Flask-Limiter==1.2.1
+{%- endif %}
