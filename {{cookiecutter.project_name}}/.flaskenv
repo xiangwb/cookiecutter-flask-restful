@@ -4,3 +4,5 @@ SECRET_KEY=changeme
 DATABASE_URI=mongodb://localhost:27017/{{cookiecutter.app_name}}
 CELERY_BROKER_URL=redis://localhost:6379/1
 CELERY_RESULT_BACKEND_URL=redis://localhost:6379/2
+DEFAULT_LOG_DIR=
+DEFAULT_LOG_FILE=

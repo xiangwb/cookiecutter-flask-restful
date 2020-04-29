@@ -260,17 +260,19 @@ If you have updated your configuration for broker / result backend your workers 
 To run a task you can either import it and call it
 
 ```python
->>> from myapi.tasks.example import dummy_task
->>> result = dummy_task.delay()
->>> result.get()
+from myapi.tasks.example import dummy_task
+result = dummy_task.delay()
+result.get()
+
 'OK'
 ```
 
 Or use the celery extension
 
 ```python
->>> from myapi.extensions import celery
->>> celery.send_task('myapi.tasks.example.dummy_task').get()
+from myapi.extensions import celery
+celery.send_task('myapi.tasks.example.dummy_task').get()
+
 'OK'
 ```
 

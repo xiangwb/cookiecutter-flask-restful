@@ -2,8 +2,9 @@ from flask import Flask
 from mongoengine import connect
 
 from {{cookiecutter.app_name}} import auth, api
-from {{cookiecutter.app_name}}.extensions import jwt, apispec
+from {{cookiecutter.app_name}}.extensions import jwt, apispec, logger
 {%- if cookiecutter.use_celery == "yes"%}, celery{% endif%}
+from {{cookiecutter.app_name}}.request_handler import register_error_handler
 
 
 def create_app(testing=False, cli=False):
@@ -17,6 +18,7 @@ def create_app(testing=False, cli=False):
 
     configure_extensions(app, cli)
     configure_apispec(app)
+    register_request_handler(app)
     register_blueprints(app)
 {%- if cookiecutter.use_celery == "yes" %}
     init_celery(app)
@@ -35,6 +37,7 @@ def configure_extensions(app, cli):
         connect(host=app.config['DATABASE_URI'])
 
     jwt.init_app(app)
+    logger.init_loggers(app)
 
 
 def configure_apispec(app):
@@ -62,6 +65,24 @@ def register_blueprints(app):
     """
     app.register_blueprint(auth.views.blueprint)
     app.register_blueprint(api.views.blueprint)
+
+
+def register_request_handler(app):
+    """ 注册请求处理器 """
+
+    # 注册错误请求处理函数
+    register_error_handler(app)
+
+    @app.before_request
+    def before_request_callback():
+        # FIXME: 添加你想要执行的操作
+        pass
+
+    @app.after_request
+    def after_request_callback(response):
+        # FIXME: 添加你想要执行的操作
+        return response
+
 {%- if cookiecutter.use_celery == "yes" %}
 
 
