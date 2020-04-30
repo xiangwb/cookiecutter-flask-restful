@@ -1,8 +1,7 @@
 from flask import Flask
-from mongoengine import connect
 
 from {{cookiecutter.app_name}} import auth, api
-from {{cookiecutter.app_name}}.extensions import jwt, apispec, logger
+from {{cookiecutter.app_name}}.extensions import jwt, db, apispec, logger
 {%- if cookiecutter.use_celery == "yes"%}, celery{% endif%}{%- if cookiecutter.use_limiter == "yes"%}, limiter{% endif%}
 from {{cookiecutter.app_name}}.request_handler import register_error_handler
 
@@ -31,11 +30,16 @@ def configure_extensions(app, cli):
     """configure flask extensions
     """
     if cli is True:
-        connect(host='mongodb://localhost:27017/{{cookiecutter.app_name}}_tmp')
+        app.config['MONGODB_SETTINGS'] = {
+            'host': 'mongodb://localhost:27017/{{cookiecutter.app_name}}_tmp'
+        }
     else:
         # 建立mongo的数据库连接，mongo的连接只需要connect就行
-        connect(host=app.config['DATABASE_URI'])
+        app.config['MONGODB_SETTINGS'] = {
+            'host': app.config['DATABASE_URI']
+        }
 
+    db.init_app(app)
     jwt.init_app(app)
 
 {%- if cookiecutter.use_limiter == "yes" %}

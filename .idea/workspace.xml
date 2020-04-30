@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23a83b6e-ce89-446a-a84c-e1d248efd5d8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="136">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
               <folding>
                 <element signature="e#110#150#0" expanded="true" />
               </folding>
@@ -63,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" selection-start-line="27" selection-end-line="29" selection-end-column="12" />
+            <state relative-caret-position="289">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -77,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+            <state relative-caret-position="528">
+              <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -165,8 +167,8 @@
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/request_handler.py" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/config.py" />
         <option value="$PROJECT_DIR$/cookiecutter.json" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" />
         <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py" />
       </list>
     </option>
@@ -255,18 +257,18 @@
       <workItem from="1587692887164" duration="14878000" />
       <workItem from="1587717799723" duration="1234000" />
       <workItem from="1587719378731" duration="14764000" />
-      <workItem from="1588160548802" duration="2227000" />
+      <workItem from="1588160548802" duration="3264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33103000" />
+    <option name="totallyTimeSpent" value="34140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="944" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19041769" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19041769" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -280,7 +282,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Statistic" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20648259" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.09843937" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -587,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="29" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -621,23 +616,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/celery_app.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="136">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
           <folding>
             <element signature="e#110#150#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/celery_app.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+        <state relative-caret-position="528">
+          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
