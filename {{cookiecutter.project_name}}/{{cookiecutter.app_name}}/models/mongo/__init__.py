@@ -17,7 +17,8 @@ from datetime import datetime
 
 from bson import ObjectId
 from mongoengine import QuerySet, Document, BooleanField, DateTimeField, StringField, signals
-{%- if cookiecutter.use_elasticsearch == "yes"%}from apps.search import add_to_index, remove_from_index{% endif%}
+
+{%- if cookiecutter.use_elasticsearch == "yes"%}from {{cookiecutter.app_name}}.search import add_to_index, remove_from_index{% endif%}
 
 
 class ValidQuerySet(QuerySet):
@@ -38,9 +39,9 @@ class CommonDocument(Document):
     create_time = DateTimeField()
     update_time = DateTimeField(default=datetime.utcnow)
 
-    {%- if cookiecutter.use_elasticsearch == "yes" %}
+{%- if cookiecutter.use_elasticsearch == "yes" %}
     __searchable__ = []
-    {% endif %}
+{% endif %}
 
     meta = {
         'abstract': True,
@@ -67,6 +68,7 @@ def pre_bulk_insert(sender, documents, **kwargs):
 
 
 {%- if cookiecutter.use_elasticsearch == "yes" %}
+
 
 def post_save(sender, document, **kwargs):
     """ 在 save 方法执行之后执行 """
