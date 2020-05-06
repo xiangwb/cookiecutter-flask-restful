@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23a83b6e-ce89-446a-a84c-e1d248efd5d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/user.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="-429">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#229#258#0" expanded="true" />
               </folding>
@@ -245,12 +243,12 @@
       <workItem from="1587717799723" duration="1234000" />
       <workItem from="1587719378731" duration="14764000" />
       <workItem from="1588160548802" duration="4959000" />
-      <workItem from="1588747783941" duration="3044000" />
+      <workItem from="1588747783941" duration="3275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38879000" />
+    <option name="totallyTimeSpent" value="39110000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -265,7 +263,7 @@
     <frame x="0" y="23" width="1680" height="944" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1928747" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1928747" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -279,7 +277,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Statistic" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32533014" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32533014" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -644,8 +642,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="-429">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#229#258#0" expanded="true" />
           </folding>
