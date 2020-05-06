@@ -17,9 +17,9 @@ from datetime import datetime
 
 from bson import ObjectId
 from mongoengine import QuerySet, Document, BooleanField, DateTimeField, StringField, signals
-
-
-{%- if cookiecutter.use_elasticsearch == "yes"%}from {{cookiecutter.app_name}}.search import add_to_index, remove_from_index{% endif%}
+{%- if cookiecutter.use_celery == "yes" %}
+from {{cookiecutter.app_name}}.search import add_to_index, remove_from_index
+{%- endif %}
 
 
 class ValidQuerySet(QuerySet):
@@ -39,6 +39,7 @@ class CommonDocument(Document):
     is_deleted = BooleanField(default=False)
     create_time = DateTimeField()
     update_time = DateTimeField(default=datetime.utcnow)
+
 
 
 {%- if cookiecutter.use_elasticsearch == "yes" %}
