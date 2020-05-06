@@ -40,12 +40,9 @@ class CommonDocument(Document):
     create_time = DateTimeField()
     update_time = DateTimeField(default=datetime.utcnow)
 
-
-
 {%- if cookiecutter.use_elasticsearch == "yes" %}
     __searchable__ = []
 {% endif %}
-
     meta = {
         'abstract': True,
         'queryset_class': ValidQuerySet

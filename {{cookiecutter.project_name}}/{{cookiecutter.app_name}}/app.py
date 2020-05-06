@@ -8,7 +8,6 @@ from {{cookiecutter.app_name}}.request_handler import register_error_handler
 from elasticsearch import Elasticsearch
 {% endif%}
 
-
 def create_app(testing=False, cli=False):
     """Application factory, used to create application
     """

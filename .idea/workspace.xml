@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-751">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="195">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="e#229#258#0" expanded="true" />
               </folding>
@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -277,12 +277,12 @@
       <workItem from="1587717799723" duration="1234000" />
       <workItem from="1587719378731" duration="14764000" />
       <workItem from="1588160548802" duration="4959000" />
-      <workItem from="1588747783941" duration="3559000" />
+      <workItem from="1588747783941" duration="3658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39394000" />
+    <option name="totallyTimeSpent" value="39493000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -666,8 +666,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -676,8 +676,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-751">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="195">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="e#229#258#0" expanded="true" />
           </folding>
