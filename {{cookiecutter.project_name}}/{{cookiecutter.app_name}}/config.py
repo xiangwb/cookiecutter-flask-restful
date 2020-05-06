@@ -23,3 +23,6 @@ CELERY_RESULT_BACKEND = env("CELERY_RESULT_BACKEND_URL")
 {%- endif %}
 DEFAULT_LOG_DIR = env("DEFAULT_LOG_DIR", "./logs")
 DEFAULT_LOG_FILE = env("DEFAULT_LOG_FILE", "default.log")
+{%- if cookiecutter.use_elasticsearch == "yes" %}
+ELASTICSEARCH_URL = env("ELASTICSEARCH_URL")
+{%- endif %}

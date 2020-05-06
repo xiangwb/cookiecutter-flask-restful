@@ -31,3 +31,21 @@ if use_celery == "no":
     except Exception:
         print("ERROR: cannot delete celery tests files")
         sys.exit(1)
+
+
+use_elasticsearch = '{{cookiecutter.use_elasticsearch}}'
+
+
+if use_elasticsearch == "no":
+    base_path = os.getcwd()
+    app_path = os.path.join(
+        base_path,
+        '{{cookiecutter.app_name}}',
+    )
+    search_app_path = os.path.join(app_path, 'search.py')
+
+    try:
+        os.remove(search_app_path)
+    except Exception:
+        print("ERROR: cannot delete elasticsearch search file")
+        sys.exit(1)

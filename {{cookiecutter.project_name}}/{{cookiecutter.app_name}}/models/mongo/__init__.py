@@ -16,7 +16,8 @@
 from datetime import datetime
 
 from bson import ObjectId
-from mongoengine import QuerySet, Document, BooleanField, DateTimeField, StringField
+from mongoengine import QuerySet, Document, BooleanField, DateTimeField, StringField, signals
+{%- if cookiecutter.use_elasticsearch == "yes"%}from apps.search import add_to_index, remove_from_index{% endif%}
 
 
 class ValidQuerySet(QuerySet):
@@ -37,19 +38,69 @@ class CommonDocument(Document):
     create_time = DateTimeField()
     update_time = DateTimeField(default=datetime.utcnow)
 
-    def save(self, *args, **kwargs):
-        # 也可以选择重写clean
-        if not self.create_time:
-            self.create_time = datetime.utcnow()
-            self.id = ObjectId().__str__()
-        self.update_time = datetime.utcnow()
-        return super(CommonDocument, self).save(*args, **kwargs)
-
-    def update(self, **kwargs):
-        kwargs['update_time'] = datetime.utcnow()
-        return super(CommonDocument, self).update(**kwargs)
+    {%- if cookiecutter.use_elasticsearch == "yes" %}
+    __searchable__ = []
+    {% endif %}
 
     meta = {
         'abstract': True,
         'queryset_class': ValidQuerySet
     }
+
+
+def pre_save(sender, document, **kwargs):
+    """ 在 save 方法执行之前执行 """
+    if not document.create_time:
+        document.create_time = datetime.utcnow()
+        document.id = ObjectId().__str__()
+    document.update_time = datetime.utcnow()
+
+
+def pre_bulk_insert(sender, documents, **kwargs):
+    """ 批量插入执行之前执行 """
+    now = datetime.utcnow()
+    for document in documents:
+        if not document.create_time:
+            document.create_time = now
+            document.id = ObjectId().__str__()
+        document.update_time = now
+
+
+{%- if cookiecutter.use_elasticsearch == "yes" %}
+
+def post_save(sender, document, **kwargs):
+    """ 在 save 方法执行之后执行 """
+    # FIXME: 配合软删得做一些额外的工作
+    doc_col = document.__class__.__dict__['_meta']['collection']
+    # 插入数据到es
+    add_to_index(doc_col, document)
+
+
+def post_delete(sender, document, **kwargs):
+    """ 在 删除 方法执行之后执行 """
+    doc_col = document.__class__.__dict__['_meta']['collection']
+    # 删除es的数据
+    remove_from_index(doc_col, document)
+
+
+def post_bulk_insert(sender, documents, **kwargs):
+    """ 批量插入执行之后执行 """
+    pass
+
+
+class SearchableMixin(object):
+
+    @classmethod
+    def reindex(cls):
+        for obj in cls.objects.filter(is_deleted=False):
+            add_to_index(cls.__dict__['_meta']['collection'], obj)
+{% endif %}
+
+# 注册信号
+signals.pre_save.connect(pre_save)
+signals.pre_bulk_insert.connect(pre_bulk_insert)
+{%- if cookiecutter.use_elasticsearch == "yes" %}
+signals.post_save.connect(post_save)
+signals.post_delete.connect(post_delete)
+signals.post_bulk_insert.connect(post_bulk_insert)
+{% endif %}

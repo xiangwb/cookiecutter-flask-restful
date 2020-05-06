@@ -4,6 +4,7 @@ from {{cookiecutter.app_name}} import auth, api
 from {{cookiecutter.app_name}}.extensions import jwt, db, apispec, logger
 {%- if cookiecutter.use_celery == "yes"%}, celery{% endif%}{%- if cookiecutter.use_limiter == "yes"%}, limiter{% endif%}
 from {{cookiecutter.app_name}}.request_handler import register_error_handler
+{%- if cookiecutter.use_elasticsearch == "yes"%}from elasticsearch import Elasticsearch{% endif%}
 
 
 def create_app(testing=False, cli=False):
@@ -46,6 +47,9 @@ def configure_extensions(app, cli):
     limiter.init_app(app)
 {%- endif %}
     logger.init_loggers(app)
+{%- if cookiecutter.use_elasticsearch == "yes" %}
+    app.es = Elasticsearch(app.config['ELASTICSEARCH_URL'])
+{%- endif %}
 
 
 def configure_apispec(app):
