@@ -1,0 +1,41 @@
+{%- if cookiecutter.wsgi_server == "uwsgi" -%}
+{% set web_command = "uwsgi --http 0.0.0.0:5000 --module " + cookiecutter.app_name + ".wsgi:app" %}
+{%- elif cookiecutter.wsgi_server == "gunicorn" -%}
+{% set web_command = "gunicorn -b 0.0.0.0:5000 " + cookiecutter.app_name + ".wsgi:app" %}
+{%- else -%}
+{% set web_command = cookiecutter.app_name + " run -h 0.0.0.0" %}
+{%- endif -%}
+# WARNING: this file is not suitable for production, please use with caution
+version: '3'
+
+services:
+  web:
+    image: {{cookiecutter.app_name}}
+    build: .
+    command: {{web_command}}
+    env_file:
+      - ./.envs/.local/.flask
+    environment:
+      - DATABASE_URI=mongodb://localhost:27017/{{cookiecutter.app_name}}
+{%- if cookiecutter.use_celery == "yes"%}
+      - CELERY_BROKER_URL=redis://localhost:6379/1
+      - CELERY_RESULT_BACKEND_URL=redis://localhost:6379/2
+{%- endif %}
+    volumes:
+      - ./{{cookiecutter.app_name}}:/code/{{cookiecutter.app_name}}
+      - ./db/:/db/
+    ports:
+      - "5000:5000"
+{%- if cookiecutter.use_celery == "yes" %}
+  redis:
+    image: redis
+  celery:
+    image: {{cookiecutter.app_name}}
+    command: "celery worker -A {{cookiecutter.app_name}}.celery_app:app"
+    env_file:
+      - ./.envs/.local/.flask
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+{%- endif %}

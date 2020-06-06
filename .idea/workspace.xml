@@ -3,38 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="23a83b6e-ce89-446a-a84c-e1d248efd5d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.project_name}}/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.project_name}}/local.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-              <folding>
-                <element signature="e#229#258#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cookiecutter.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,111 +31,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/tox.ini" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/.gitignore" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/Dockerfile" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/es/__init__.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/__init__.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/blacklist.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/manage.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/commons/pagination.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/conftest.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/auth/helpers.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/setup.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/auth/views.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/views.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_user.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_celery.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_deploy_pyc.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_cython.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/Makefile" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/request_handler.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py" />
-        <option value="$PROJECT_DIR$/cookiecutter.json" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt" />
-        <option value="$PROJECT_DIR$/hooks/post_gen_project.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/config.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/.flaskenv" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/user.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="944" />
-  </component>
+  <component name="ProjectId" id="1bkhLOkT6llVvaMcP9MkzMFsG1F" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cookiecutter-flask-restful" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-flask-restful" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-flask-restful" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-flask-restful" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.project_name}}" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-flask-restful" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-flask-restful" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.project_name}}" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-flask-restful" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-flask-restful" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.project_name}}" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-flask-restful" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-flask-restful" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.project_name}}" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="mongo" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/{{cookiecutter.project_name}}" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}" />
-      <recent name="$PROJECT_DIR$/{{cookiecutter.project_name}}" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projects\PyProjects\cookiecutter-flask-restful\{{cookiecutter.project_name}}" />
+      <recent name="$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}" />
+      <recent name="$PROJECT_DIR$/{{cookiecutter.project_name}}" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -189,11 +79,12 @@
       <workItem from="1587719378731" duration="14764000" />
       <workItem from="1588160548802" duration="4959000" />
       <workItem from="1588747783941" duration="5044000" />
+      <workItem from="1589181943509" duration="2016000" />
+      <workItem from="1590372019568" duration="597000" />
+      <workItem from="1591098208285" duration="599000" />
+      <workItem from="1591440382176" duration="381000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -204,396 +95,23 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="944" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1928747" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32893157" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Statistic" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32533014" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Packages" order="3" />
-      <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="right" id="R Graphics" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/migrations/versions/3c403aee5d08_initial_migration.py" />
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/migrations/script.py.mako" />
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tox.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/commons/apispec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-729">
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/commons/templates/swagger.j2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/blacklist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/cookiecutter-options.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/commons/pagination.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="e#39#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="1026" column="8" selection-start-line="1026" selection-start-column="8" selection-end-line="1026" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/auth/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/auth/helpers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-193">
-          <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-          <folding>
-            <element signature="e#195#224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/auth/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="65" column="57" selection-start-line="65" selection-start-column="57" selection-end-line="65" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="90" column="12" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding>
-            <element signature="e#1#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_celery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/test_auth.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/tests/conftest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/pytest.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_deploy_pyc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <element signature="e#235#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/generate_cython.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <element signature="e#245#254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/loggers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-422">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#217#228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/es/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/request_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="e#225#241#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/celery_app.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/tasks/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/tasks/example.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/search.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/resources/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hooks/post_gen_project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="17" selection-start-line="35" selection-end-line="35" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="321">
-            <caret line="66" column="75" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="75" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/extensions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding>
-            <element signature="e#110#150#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/.flaskenv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cookiecutter.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.project_name}}/{{cookiecutter.app_name}}/models/mongo/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="e#229#258#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

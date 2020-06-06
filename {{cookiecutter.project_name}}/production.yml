@@ -34,11 +34,9 @@ services:
     command: "celery worker -A {{cookiecutter.app_name}}.celery_app:app"
     env_file:
       - ./.flaskenv
+      - ./.envs/.local/.flask
     volumes:
       - .:/code
     depends_on:
       - redis
-    environment:
-      - CELERY_BROKER_URL=redis://localhost:6379/1
-      - CELERY_RESULT_BACKEND_URL=redis://localhost:6379/2
 {%- endif %}
